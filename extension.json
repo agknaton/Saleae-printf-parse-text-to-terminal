@@ -1,0 +1,13 @@
+{
+  "name": "printf parse text to terminal",
+  "apiVersion": "1.0.0",
+  "author": "Agknaton Bottenberg",
+  "version": "1.0.0",
+  "description": "Extract ASCII text from bus protocols and simply print it to the terminal",
+  "extensions": {
+    "printf parse text to terminal": {
+      "type": "HighLevelAnalyzer",
+      "entryPoint": "HighLevelAnalyzer.Hla"
+    }
+  }
+}
