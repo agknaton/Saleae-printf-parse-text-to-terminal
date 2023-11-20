@@ -33,8 +33,11 @@ class Hla(HighLevelAnalyzer):
         '''
         # The `data` field only contains one byte
         try:
-            ch = frame.data['data'].decode('ascii')
-            print(ch, end='')
+            if 'data' in frame.data:
+                ch = frame.data['data']
+            elif 'mosi' in frame.data:
+                ch = frame.data['mosi']
+            print(ch.decode('ascii'), end='')
         except:
             # Not an ASCII character or not data
             return
